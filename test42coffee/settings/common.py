@@ -1,5 +1,5 @@
 """
-Django settings for fortytwo_test_task project.
+Django settings for test42coffee project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -54,9 +54,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'fortytwo_test_task.urls'
+ROOT_URLCONF = 'test42coffee.urls'
 
-WSGI_APPLICATION = 'fortytwo_test_task.wsgi.application'
+WSGI_APPLICATION = 'test42coffee.wsgi.application'
 
 
 # Database

@@ -1,17 +1,14 @@
-42-test template
-===========================
+Show your name, surname, bio, contacts on the main page
+ Create basic django-project that would present your name, surname, date of birth, bio, contacts on the main page. Data should be stored in the DB, that's
 
-A Django 1.6+ project template
+    manage.py syncdb
+    manage.py runserver
+    open the browser and all data are in, loaded from fixtures 
 
-Use fortytwo_test_task.settings when deploying with getbarista.com
+Add superuser with login: admin pass: admin via fixtures
 
-### Recomendations
-* apps in apps/ folder
-* use per-app templates folders
-* use per-app static folders
-* use migrations
-* use settings.local for different environments
-* common templates live in templates/
-* common static lives in assets/
-* management commands should be proxied to single word make commands, e.g make test
+Use pip requirements and virtualenv to manage your third party packages dependencies
 
+Use south, you'll need it later
+
+There should be Makefile with test target running your tests (make test to verify it)
