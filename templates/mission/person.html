@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!--<div class="col-md-12">-->
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Nikolai
+                            {{# person_description.name #}}
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Golikov
+                            {{# person_description.second_name #}
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            1969-10-04
+                            {{# person_description.birthdate #}}
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Very, very long biography.
+                            </br>
+                            ...................
+                            </br>
+                            ...................
+                            </br>
+                            Biography end.
+                            {{# person_description.bio #}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Contacts
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Email: uldo.forme@gmail.com
+                            {{# person_description.email #}}
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Jabber: contemplat0r@42cc.co 
+                            {{# person_description.djabber_id #}}
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Skype: contemplat0r
+                            {{# person_description.skype_id #}}
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                        <div class="col-md-12">
+                            Phone: +380507777777
+                            {{# person_description.other_contacts #}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
