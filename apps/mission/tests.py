@@ -1,22 +1,18 @@
 from django.test import TestCase
+from django.test import Client
 from mission.models import PersonDescription
 
 # Create your tests here.
 
-class PersonDescriptionTestCase(TestCase):
+
+class ResponseDescriptionViewTestCase(TestCase):
+
     def setUp(self):
-        PersonDescription.objects.create(name='Leonard', surname='Hofstadter', birthdate='1981-10-01', email='not.sheldon@gmail.com', phone='111111111', bio='Very long biography')
-        PersonDescription.objects.create(name='Sheldon', surname='Cuper', birthdate='1981-10-02', email='sheldon___gmail.com', phone='222222222')
-        #PersonDescription.objects.create(name='W' * 34, surname='Unknown', birthdate='1981-10-02', email='unknown_person@gmail.com', phone='333333333')
-        
+        self.client = Client()
 
-    def test_model_data_correctness(self):
-        correct_person_description = PersonDescription.objects.get(name='Leonard')
-        self.assertEqual(correct_person_description.email.find('@') != -1, True)
-        incorrect_person_description = PersonDescription.objects.get(name='Sheldon')
-        self.assertEqual(incorrect_person_description.email.find('@') != -1, True)
-        #another_incorrect_person_description = PersonDescription.objects.get(surname='Unknown')
-        #self.assertEqual(len(another_incorrect_person_description.name) > 33, False)
+    def test_response(self):
+        response = self.client.get('/persondescription/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'person.html')
+        self.assertContains(response, 'class="container"')
 
-
-class PersonDescriptionViewTestCase(TestCase):
