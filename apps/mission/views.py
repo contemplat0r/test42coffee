@@ -7,12 +7,12 @@ from django.shortcuts import render_to_response
 
 def home(request):
     context = {'person_description': {
-        'name': 'Nikolai',
-        'second_name': 'Golikov',
-        'birthdate': '1969-10-04',
-        'biography': 'Very long biography....',
-        'email': 'uldo.forme@gmail.com',
-        'jabber_id': 'contemplat0r@42cc.co',
-        'skype_id': 'contemplat0r',
-        'other_contacts': 'Phone: +380507777777'}}
+        'name': 'Name',
+        'second_name': 'Last name',
+        'birthdate': 'Date of birth',
+        'biography': 'Bio:',
+        'email': 'email',
+        'jabber_id': 'JID',
+        'skype_id': 'id',
+        'other_contacts': 'Other contacts'}}
     return render_to_response('person.html', context)

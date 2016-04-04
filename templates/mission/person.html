@@ -1,63 +1,58 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <div class="row">
-        <!--<div class="col-md-12">-->
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.name }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.second_name }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.birthdate }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.biography }}
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Contacts
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Email: {{ person_description.email }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Jabber: {{ person_description.jabber_id }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Skype: {{ person_description.skype_id }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.other_contacts }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h4>
+        42 Coffe Cups Test Assignment
+    </h4>
+    <table border="0" cellpadding="8" cellspacing="8">
+        <tr>
+            <td>
+                {{ person_description.name }}
+            </td>
+            <td>
+                Contacts
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ person_description.second_name }}
+            </td>
+            <td>
+                Email: {{ person_description.email }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ person_description.birthdate }}
+            </td>
+            <td>
+                Jabber: {{ person_description.jabber_id }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ person_description.biography }}
+            </td>
+            <td>
+                Skype: {{ person_description.skype_id }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Multiline
+            </td>
+            <td>
+                {{ person_description.other_contacts }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                Multiline
+            </td>
+        </tr>
+    </table>
 </div>
-
 {% endblock content %}
 
