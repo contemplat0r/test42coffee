@@ -3,7 +3,7 @@ SETTINGS=test42coffee.settings
 
 test:
 	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=$(SETTINGS) $(MANAGE) test
-	flake8 --exclude '*migrations*' apps test42coffee
+	flake8 --exclude '*migrations*' --ignore 'F403'  apps test42coffee
 
 run:
 	PYTHONPATH=`pwd` DJANGO_SETTINGS_MODULE=$(SETTINGS) $(MANAGE) runserver
