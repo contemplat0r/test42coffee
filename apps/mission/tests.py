@@ -11,7 +11,7 @@ class ResponseDescriptionViewTestCase(TestCase):
         self.client = Client()
 
     def test_response(self):
-        response = self.client.get('/persondescription/')
+        response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'person.html')
         self.assertContains(response, 'class="container"')
