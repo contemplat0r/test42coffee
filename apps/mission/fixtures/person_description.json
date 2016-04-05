@@ -1,0 +1,16 @@
+[
+    {"pk": 1,
+        "model":
+        "mission.persondescription",
+        "fields": {
+            "bio": "Very long biography\n...................\n...................\nBiography end.",
+            "surname": "Golikov",
+            "name": "Nikolai",
+            "other_contacts": "Phone: +380507777777",
+            "birthdate": "1969-10-04",
+            "skype": "contemplat0r",
+            "jabber": "contemplat0r@42cc.co",
+            "email": "uldo.forme@gmail.com"
+        }
+    }
+]

@@ -14,3 +14,6 @@ class PersonDescription(models.Model):
     jabber = models.CharField(max_length=32)
     skype = models.CharField(max_length=32)
     other_contacts = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return ' '.join([self.name, self.surname])
