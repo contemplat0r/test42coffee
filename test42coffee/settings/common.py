@@ -134,7 +134,6 @@ TEMPLATE_DIRS = (
 FIXTURE_DIRS = (
     os.path.join(BASE_DIR, "fixtures",),
 )
-print 'FIXTURE_DIRS: ', FIXTURE_DIRS
 
 # Turn off south during test
 SOUTH_TESTS_MIGRATE = False

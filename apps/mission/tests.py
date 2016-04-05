@@ -25,16 +25,7 @@ class ResponseDescriptionViewTest(TestCase):
 class PersonDescriptionTestCase(TestCase):
 
     def setUp(self):
-        PersonDescription.objects.create(
-            name='Nikolai',
-            surname='Golikov',
-            birthdate='1969-10-04',
-            bio='Very long biography\n' +
-            '.' * 19 + '\n' + '.' * 19 + '\nBiography end.',
-            email='uldo.forme@gmail.com',
-            jabber='contemplat0r@42cc.co',
-            skype='contemplat0r',
-            other_contacts='Phone: +380507777777')
+        pass
 
     def test_model_data_presence(self):
 
