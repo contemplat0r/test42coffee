@@ -9,64 +9,69 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <!--<div class="col-md-12">-->
-        <div class="col-md-8 col-md-offset-2">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.name }}
+{% if person_description %}
+    <div class="container">
+        <div class="row">
+            <!--<div class="col-md-12">-->
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                {{ person_description.name }}
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                {{ person_description.second_name }}
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                {{ person_description.birthdate }}
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                {{ person_description.biography|escape|linebreaks }}
+                            </div>
                         </div>
                     </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.second_name }}
+                    <div class="col-md-6">
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                Contacts
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.birthdate }}
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                Email: {{ person_description.email }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.biography|escape|linebreaks }}
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                Jabber: {{ person_description.jabber_id }}
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Contacts
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                Skype: {{ person_description.skype_id }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Email: {{ person_description.email }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Jabber: {{ person_description.jabber_id }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            Skype: {{ person_description.skype_id }}
-                        </div>
-                    </div>
-                    <div class="row" style="padding-top: 4px; padding-bottom: 4px">
-                        <div class="col-md-12">
-                            {{ person_description.other_contacts|escape|linebreaks }}
+                        <div class="row" style="padding-top: 4px; padding-bottom: 4px">
+                            <div class="col-md-12">
+                                {{ person_description.other_contacts|escape|linebreaks }}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
+{% else %}
+    <h4>
+        Person does not exists
+    </h4>
+{% endif %}
 {% endblock content %}
 
